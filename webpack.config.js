@@ -1,15 +1,15 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+  entry: "./src/app.js",
   output: {
-    filename: 'bundle.js',
-    publicPath: '/assets/',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "bundle.js",
+    publicPath: "/",
+    path: path.resolve(__dirname, "dist")
   },
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }],
+    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }]
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin()]
 };
